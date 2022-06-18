@@ -1,0 +1,205 @@
+header {
+    font: 'Lexend Deca';
+    text-align: right;
+    margin: 10px;
+    padding: 5px;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    max-height: 100vh;
+}
+
+@font-face {
+    font-family: 'Lexend Deca', 'Big Shoulder Display';
+    @import src url(https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap);
+    font-weight: 400, 700;
+    font-size: 15px
+}
+
+@media screen and (max-width: 375px) {
+    .div {
+        display: block;
+        flex-direction: row;        
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .div {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+a {
+    text-decoration-line: none;
+    color: orange;
+}
+
+#gridbut {
+    text-decoration-line: none;
+    background-color: hsl(184, 100%, 22%);
+    color: orange;
+    width: 100px;
+    margin: 0px;
+}
+
+img {
+    float: left;
+    margin: 50px;
+    padding-right: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: nowrap;
+    margin: 80px;
+    margin-top: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    height: 550px;
+    width: 1100px;
+}
+
+.div1 {
+    background-color: hsl(31, 77%, 52%);
+    width: 350px;
+    height: 550px;
+    line-height: 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.div2 {
+    background-color: hsl(184, 100%, 22%);
+    width: 350px;
+    height: 550px;
+    line-height: 25px;
+}
+
+.div3 {
+    background-color: hsl(179, 100%, 13%);
+    width: 350px;
+    height: 550px;
+    line-height: 25px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display';
+    margin-left: 30px;
+    margin-right: 45px;
+    padding: 20px;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca';
+    margin-left: 30px;
+    margin-right: 40px;
+    padding: 20px;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 30px;
+    border-style: none;
+    text-align: center;
+    font-family: 'Lexend Deca';
+    width: 150px;
+    height: 40px;
+    margin: 40px;
+}
+
+/**Grid Layout**/
+
+body {
+    background-color: rgb(15, 15, 49);
+    padding-left: 70px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    min-height: 100vh;
+}
+
+.griddiv {
+    display: grid;
+    grid-template-areas:
+        'a a b'
+        'c d d'
+        'c e e';
+    gap: 15px;
+    width: 845px;
+    height: 615px;
+}
+
+.TL {
+    background-color: rgb(255, 94, 0);
+    grid-area: a;
+    width: 550px;
+    height: 280px;
+}
+
+.TR {
+    background-color: rgb(226, 144, 20);
+    grid-area: b;
+    width: 280px;
+    height: 280px;
+}
+
+.BL {
+    background-color: rgb(70, 187, 70);
+    grid-area: c;
+    width: 400px;
+    height: 320px;
+}
+
+.BR1 {
+    background-color: rgb(12, 145, 234);
+    grid-area: d;
+    width: 430px;
+    height: 150px;
+    margin-bottom: 0px;
+}
+
+.BR2 {
+    background-color: rgb(12, 145, 234);
+    grid-area: e;
+    width: 430px;
+    height: 150px;
+}
+
+@media screen and (max-width: 375px) {
+    .griddiv {
+        display: block;
+        gap: 10px;
+        grid-template-areas:
+            'a'
+            'b'
+            'c'
+            'd'
+            'e';
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .griddiv {
+        display: grid;
+        gap: 15px;
+        grid-template-areas:
+            'a a b'
+            'c d d'
+            'c e e';
+    }
+}
